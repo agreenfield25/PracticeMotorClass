@@ -10,6 +10,9 @@ class Motor:
         # set speed immediately
 
     def set_speed(self, speed):
+        speed=max(-1, speed)
+        speed=min(1,speed)
+        speed=speed^3 #making a dead-zone
         self.speed = speed
         # define speed
 
